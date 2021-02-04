@@ -1,14 +1,5 @@
 trigger Contact_Finder on Account ( after update) {
-    /*List<Account> li = new List<Account>();
-    for(Account acc: [select id from Account]){
-        List<AggregateResult> rds= [select count(id) from Contact where AccountId =: acc.id];
-        System.debug('List is' + rds);
-        String str = ''+ rds[0].get('expr0');
-        System.debug('String' + str);
-        acc.Number_of_Contacts__c= Decimal.ValueOf(str); 
-        li.add(acc);
-    }
-    update li;*/
+
     if(triggerHelperClass.variable == false){
     List<Account> li = new List<Account>();
         
